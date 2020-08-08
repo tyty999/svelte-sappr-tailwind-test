@@ -1,0 +1,18 @@
+<svelte:head>
+	<title>Sapper project template</title>
+</svelte:head>
+
+{#if $user}
+	<Private/>
+{:else}
+	<Public/>
+{/if}
+
+<script>
+	export default {
+		components: {
+			Private: './_private.html',
+			Public: './_public.html',
+		},
+	}
+</script>
